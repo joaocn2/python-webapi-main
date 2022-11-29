@@ -6,7 +6,7 @@ RUN ln -snf /usr/share/zoneinfo/${TZ} /etc/localtime && echo ${TZ} > /etc/timezo
 ARG UID=1000
 ARG GID=1000
 ARG ENV=development
-ARG UNAME=development
+ARG UNAME=dev
 ENV PATH="/home/dev/.local/bin:${PATH}"
 
 RUN addgroup -S devgroup && adduser -S dev -G devgroup -u ${UID} -h /home/dev
